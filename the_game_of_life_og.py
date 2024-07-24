@@ -44,10 +44,10 @@ if __name__ == '__main__':
     #Initialize pygame
     pygame.init()
     # Set size of cells
-    size=10
+    size= 100
     # Set size of screen
-    WIDTH = 3840
-    HEIGHT = 2160
+    WIDTH = 1600
+    HEIGHT = 900
     cells = np.random.randint(0, 2, size=(216, 384))
 
     #Init surface/screen
@@ -78,7 +78,7 @@ if __name__ == '__main__':
                     update(screen, cells, size)
                     pygame.display.update()
                     # Listen to mouse clicks
-            if pygame.mouse.get_pressed()[0]:
+                if pygame.mouse.get_pressed()[0]:
                 position = pygame.mouse.get_pos()
                 if cells[position[1] // size, position[0]// size] == 0:
                     cells[position[1] // size, position[0]// size] = 1
